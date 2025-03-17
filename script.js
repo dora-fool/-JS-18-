@@ -16,10 +16,14 @@ const user = {
     }
 };
 
-///// Задание 3 /////
+///// Задание 3 ////
+
+const applyFunctionToArray = (fn, array) => array.map(fn);
 
 const numbers1 = [1, 2, 3, 4, 5];
-const multiplyByTwo = (num) => num * 2;
-const result = applyFunctionToArray(multiplyByTwo, numbers1);
 
-console.log(result);
+const square = (x) => x * x;
+
+const squaredNumbers = applyFunctionToArray(square, numbers1);
+
+console.log(squaredNumbers);
